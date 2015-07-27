@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="org.apache.cordova.wifiinfo"
+      version="0.1.1">
+
+    <name>Wifi Setting Movement</name>
+    <description>Wifi Setting Movement Plugin</description>
+    <license>ENCORED</license>
+    <keywords>encored,wifi</keywords>
+    <repo>https://github.com/dippi/org.apache.cordova.wifiinfo</repo>
+    <!--
+    <dependency id="org.apache.cordova.network-information" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git" />
+    -->
+    <js-module src="www/Encored.js" name="encored">
+        <clobbers target="encored.moveWifi" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Encored">
+                <param name="ios-package" value="CDVEncored"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/Encored.h" />
+        <source-file src="src/ios/Encored.m" />
+    </platform>
+</plugin>
