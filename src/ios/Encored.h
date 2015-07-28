@@ -3,7 +3,7 @@
 
 #import <Cordova/CDVPlugin.h>
 
-@interface ENCORED : CDVPlugin
+@interface Encored : CDVPlugin
 
 - (void)moveToSettings:(CDVInvokedUrlCommand* )command;
 

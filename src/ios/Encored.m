@@ -4,10 +4,10 @@
 
 
 
-#import "ENCORED.h"
+#import "Encored.h"
 #import <Cordova/CDV.h>
 
-@implementation ENCORED
+@implementation Encored
 
 - (void)moveToSettings:(CDVInvokedUrlCommand*)command
 {

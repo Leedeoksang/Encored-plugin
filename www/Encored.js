@@ -1,10 +1,10 @@
 var exec = require('cordova/exec');
 var platform = require('cordova/platform');
 
-var ENCORED = {
+var Encored = {
 
-	moveToSettings: function () {
-		cordova.exec();
+	moveToSettings: function (successFunc, errorFunc) {
+		cordova.exec(successFunc, errorFunc, 'Encored', 'moveToSettings', []);
 	}
 };
-module.exports = ENCORED;
+module.exports = Encored;

@@ -1,31 +1,34 @@
-<?xml version="0.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="https://github.com/Leedeoksang/Encored-plugin.git"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
            id="encored"
       version="0.1">
 
     <name>Encored</name>
     <description>Wifi Setting Movement Plugin</description>
-    <license>ENCORED</license>
+    <license>Encored</license>
     <keywords>encored,wifi</keywords>
     <repo>https://github.com/Leedeoksang/Encored-plugin.git</repo>
-    <!--
-    <dependency id="org.apache.cordova.network-information" url="https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git" />
-    -->
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/Encored.js" name="encored">
+        <clobbers target="encored" />
+    </js-module>
 
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="Encored">
-                <param name="ios-package" value="CDVEncored"/>
+                <param name="ios-package" value="Encored"/>
             </feature>
         </config-file>
-
-        <js-module src="www/Encored.js" name="encored">
-            <clobbers target="encored" />
-        </js-module>
 
         <header-file src="src/ios/Encored.h" />
         <source-file src="src/ios/Encored.m" />
     </platform>
 </plugin>
+
+
